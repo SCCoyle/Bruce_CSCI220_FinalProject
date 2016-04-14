@@ -1,1 +1,2 @@
 # Bruce_CSCI220_FinalProject
+In this project, I will be using a binary search tree for data storage and navigation. The tree will store strings that are names of courses. The heirarchal structure of the tree will determine which courses are prerequisites, and the path through the tree shows the order in which classes must be taken. I will include many functions to perform operations on the tree, adding courses, printing courses, and navigating a path through the tree.
