@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include "CourseTree.h"
 using namespace std;
 
@@ -16,28 +17,29 @@ int main()
         cout<<"4. Take a Class"<<endl;
         cout<<"5. View Transcript"<<endl;
         cout<<"6. Exit"<<endl;
-        cin>>choice;
-        if (choice==1){
+	//used for the conversion of the input
+        string choiceS;
+	getline(cin,choiceS);
+	stringstream convert(choiceS);
+	convert >> choice;
+	if (choice==1){
             tree.postOrder();
         }
         if (choice==2){
             string name;
             cout<<"Enter a course name: ";
-            cin.ignore(1,'/n');
             getline (cin,name);
             tree.findCourse(name);
         }
         if (choice==3){
             string name;
             cout<<"Enter a course name: ";
-            cin.ignore(1,'/n');
             getline (cin,name);
             tree.viewPrerequistites(name);
         }
         if (choice==4){
             string name;
             cout<<"Enter a course to take: ";
-            cin.ignore(1,'/n');
             getline (cin,name);
             tree.takeCourse(name);
         }
